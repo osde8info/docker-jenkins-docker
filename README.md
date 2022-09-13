@@ -6,11 +6,15 @@ after running
 
 accessing jenkins for the first time with `wget localhost:8080` will fail with "HTTP request sent, awaiting response... 401 Forbidden" or ""HTTP request sent, awaiting response... 403 Forbidden"
 
-you need to use wget with `--auth-no-challenge` 
+you need to use `wget` with `--auth-no-challenge` 
 
 run
-`docker logs jk_sys-jenkins_1`
-
+`docker logs myjenkins`
+or
+```
+docker -it myjenkins bash
+cat /var/lib/jenkins/secrets/initialAdminPassword`
+```
 to get the SECRET 
 
 then

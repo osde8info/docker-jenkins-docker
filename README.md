@@ -21,4 +21,10 @@ then
 
 `wget --auth-no-challenge --user=admin --password=SECRET localhost:8088`
 
-see https://www.jenkins.io/doc/book/system-administration/authenticating-scripted-clients/#:~:text=Note%20that%20Jenkins%20does%20not%20do%20any%20authorization,first%20request%20%28aka%20%22preemptive%20authentication%22%29.%20Shell%20with%20curl
+refs
+
+https://www.jenkins.io/doc/book/system-administration/authenticating-scripted-clients/#:~:text=Note%20that%20Jenkins%20does%20not%20do%20any%20authorization,first%20request%20%28aka%20%22preemptive%20authentication%22%29.%20Shell%20with%20curl
+
+https://itnext.io/docker-inside-docker-for-jenkins-d906b7b5f527
+
+https://github.com/smoogie/jenkins_docker_example

@@ -8,6 +8,7 @@ services:
   myjenkins:
     container_name: myjenkins
     build:
+      context: .
       dockerfile: Dockerfile
     # image: jenkins/jenkins:lts
     ports:

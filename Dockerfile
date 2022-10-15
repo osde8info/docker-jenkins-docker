@@ -4,7 +4,7 @@
 
 FROM jenkins/jenkins:lts
 
-COPY /usr/bin/docker /usr/local/bin/
-COPY /usr/bin/docker-compose /usr/local/bin/
+COPY --from=docker:20.10 /usr/local/bin/docker /usr/local/bin/
+COPY --from=docker:20.10 /usr/bin/docker-compose /usr/local/bin/
 
 USER jenkins

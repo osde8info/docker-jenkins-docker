@@ -3,6 +3,7 @@
 see
 
 https://itnext.io/docker-inside-docker-for-jenkins-d906b7b5f527
+https://github.com/docker/cli/issues/2281#issuecomment-577745894
 
 after running 
 

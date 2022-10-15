@@ -1,14 +1,21 @@
-version: '3.4'
+#
+#
+#
+
+version: "3.4"
 
 services:
-  jenkins:
-    image: jenkins/jenkins:lts
+  myjenkins:
+    container_name: myjenkins
+    build:
+      dockerfile: Dockerfile
+    # image: jenkins/jenkins:lts
     ports:
-      - 8088:8080
+      - 8888:8080
       - 126:50000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - jenkhome:/var/jenkins_home
+      - myjenkins:/var/jenkins_home
 
 volumes:
-  jenkhome:
+  myjenkins:

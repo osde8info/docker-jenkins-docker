@@ -1,14 +1,22 @@
-version: '3.3'
+#
+#
+#
+
+version: "3.4"
 
 services:
-
-  sys-jenkins:
-    image: jenkins/jenkins:lts
+  myjenkins:
+    container_name: myjenkins
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: jenkins/jenkins:lts
     ports:
-      - 8123:8080
+      - 8888:8080
       - 126:50000
     volumes:
-      - jenkhome:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - myjenkins:/var/jenkins_home
 
 volumes:
-  jenkhome:
+  myjenkins:
